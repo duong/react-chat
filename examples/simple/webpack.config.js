@@ -16,22 +16,13 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('style.css, { allChunks: true }')
+    new ExtractTextPlugin('style.css', { allChunks: true }),
+    new webpack.NoErrorsPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      exclude: /node_modules/,
-      include: __dirname
-    },
-    {
-      test: /\.css$/,
-      loaders: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'),
-      exclude: /node_modules/,
-      include: __dirname
-    }
+    loaders: [
+      { test: /\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') }
     ]
   }
 };
