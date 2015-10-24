@@ -1,0 +1,29 @@
+.base {
+    background: #dcdcdc;
+    color: #424242;
+    width: 100%;
+    min-width: 160px;
+    height: 100%;
+    border: 1px solid #424242;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+.arrow {
+    content: '';
+    border-style: solid;
+    width: 0;
+    z-index: 1;
+    position: absolute;
+    margin-top: 12px;
+}
+
+.msgBox {
+    width: 98%;
+    position: relative;
+    margin: 10px;
+    line-height: 1.4;
+    float: left;
+}
+
