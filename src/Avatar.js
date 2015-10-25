@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import styles from './Chat.css';
 
 export default class Avatar extends Component {
   static defaultProps = {
@@ -13,7 +14,9 @@ export default class Avatar extends Component {
 
   render() {
     return (
-      <div>{ this.props.name[0] }</div>
+      <div className={styles.avatar}>
+        { this.props.src ? <img  className={styles.img} src={this.props.src} /> : <div className={styles.txt}>{this.props.name[0]}</div> }
+      </div>
     );
   }
 
