@@ -18,13 +18,17 @@ body {
     position: absolute;
 }
 
-.arrowLeft {
+.arrow{
     content: '';
     border-style: solid;
     width: 0;
     z-index: 1;
     position: absolute;
     margin-top: 12px;
+}
+
+.arrowLeft {
+    composes: arrow;
     border-width: 5px 6px 5px 0;
     border-color: transparent #f6f9fd;
     left: 27px;
@@ -32,12 +36,7 @@ body {
 }
 
 .arrowRight {
-    content: '';
-    border-style: solid;
-    width: 0;
-    z-index: 1;
-    position: absolute;
-    margin-top: 12px;
+    composes: arrow;
     border-width: 5px 0 5px 6px;
     border-color: transparent #e6ffd1;
     right: 5px;
@@ -52,21 +51,22 @@ body {
     float: left;
 }
 
-.my_msg {
+.msg {
     border-radius: 3px;
     padding: 5px 5px 2px 5px;
     margin-right: 10px;
     max-width: 90%;
+}
+
+.my_msg {
+    composes: msg;
     background: #e6ffd1;
     border: solid 1px #b4d89f;
     float: right
 }
 
 .u_msg {
-    border-radius: 3px;
-    padding: 5px 5px 2px 5px;
-    margin-right: 10px;
-    max-width: 90%;
+    composes: msg;
     background: rgba(249, 252, 255, 1);
     border: solid 1px #a6b8c9;
     float: left;
