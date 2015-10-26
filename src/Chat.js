@@ -2,6 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import Avatar from './Avatar';
 import styles from './Chat.css';
 
+function getTimeStamp(msgTime) {
+    var date = new Date(msgTime*1000);
+    var hours = date.getHours();
+    var minutes = "0" + date.getMinutes();
+    return (hours + ':' + minutes.substr(-2));
+}
+
 class MsgBox extends Component {
     render() {
         return(
@@ -13,6 +20,7 @@ class MsgBox extends Component {
                             <div style={{float: 'left'}}> {this.props.name} </div>
                         </div>
                     }
+                    <div style={{float: 'left'}}> {getTimeStamp(this.props.time)} </div>
                 </div>
             </div>
         );
