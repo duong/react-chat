@@ -21,6 +21,7 @@ class MsgBox extends Component {
                         !(owner === this.props.sender) &&
                         <div>
                             <div style={{float: 'left'}}> {this.props.name} </div>
+                            <div className='icon-access-time'></div>
                         </div>
                     }
                     <div style={{float: 'left'}}> {getTimeStamp(this.props.time)} </div>

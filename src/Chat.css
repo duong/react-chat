@@ -107,6 +107,7 @@ body {
     width: 95%;
     height: 100%;
 }
+
 @media (max-width: 610px) {
     .msg {
         max-width: 85%;
