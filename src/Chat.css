@@ -107,3 +107,29 @@ body {
     width: 95%;
     height: 100%;
 }
+@media (max-width: 610px) {
+    .msg {
+        max-width: 85%;
+    }
+}
+@media (max-width: 420px) {
+    .msg {
+        max-width: 80%;
+    }
+    .content_msg{
+        font-size: 14px;
+    }
+}
+@media (max-width: 320px) {
+    .msg {
+        max-width: 70%;
+    }
+}
+@media (max-width: 250px) {
+    .msg {
+        max-width: 55%;
+    }
+    .content_msg{
+        font-size: 12px;
+    }
+}
